@@ -5,13 +5,7 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    volumes:
-      - ..:/workspace:cached
-    # Adiciona variáveis de ambiente para o app se conectar ao MinIO
-    environment:
-      - MINIO_ENDPOINT=minio:9000
-      - MINIO_ACCESS_KEY=minioadmin
-      - MINIO_SECRET_KEY=minioadmin
+r
       - MINIO_BUCKET=mybucket # Bucket de exemplo
     command: sleep infinity
     depends_on:
