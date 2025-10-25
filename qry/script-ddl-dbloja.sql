@@ -40,7 +40,7 @@ CREATE TABLE db_loja.produto (
     data_atualizacao TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Registra a última modificação do produto. Será atualizado automaticamente pelo Trigger.
    CONSTRAINT fk_categoria                 -- Nome da restrição.
         FOREIGN KEY(id_categoria)           -- Coluna nesta tabela.
-        REFERENCES db_loja.categorias_produtos(id) -- Tabela e coluna referenciadas.
+        REFERENCES db_loja.categorias_produto(id) -- Tabela e coluna referenciadas.
 );
 
 -- Tabela: clientes
