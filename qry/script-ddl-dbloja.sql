@@ -21,7 +21,7 @@ CREATE SCHEMA IF NOT EXISTS db_loja;
 
 -- Tabela: categorias_produtos
 -- Armazena as categorias às quais os produtos podem pertencer.
-CREATE TABLE db_loja.categorias_produtos (
+CREATE TABLE db_loja.categorias_produto (
     id INTEGER PRIMARY KEY,                 -- Chave primária: identificador único da categoria.
     nome VARCHAR(100) NOT NULL UNIQUE,      -- Nome da categoria, não pode ser nulo e deve ser único.
     descricao TEXT                          -- Descrição opcional da categoria.
@@ -29,7 +29,7 @@ CREATE TABLE db_loja.categorias_produtos (
 
 -- Tabela: produtos
 -- Contém todos os produtos da loja.
-CREATE TABLE db_loja.produtos (
+CREATE TABLE db_loja.produto (
     id INTEGER PRIMARY KEY,                 -- Chave primária: identificador único do produto.
     nome VARCHAR(255) NOT NULL,             -- Nome do produto, não pode ser nulo.
     descricao TEXT,                         -- Descrição detalhada do produto.
@@ -45,7 +45,7 @@ CREATE TABLE db_loja.produtos (
 
 -- Tabela: clientes
 -- Armazena os dados dos clientes cadastrados.
-CREATE TABLE db_loja.clientes (
+CREATE TABLE db_loja.cliente (
     id INTEGER PRIMARY KEY,                 -- Chave primária: identificador único do cliente.
     nome VARCHAR(150) NOT NULL,             -- Nome do cliente.
     email VARCHAR(255) UNIQUE NOT NULL,     -- Email do cliente, deve ser único.
@@ -107,7 +107,7 @@ $$ LANGUAGE plpgsql; -- Define a linguagem da função como PL/pgSQL, padrão do
 -- 4.2. CRIAÇÃO DO TRIGGER (GATILHO):
 -- Este é o "gatilho" que efetivamente monitora a tabela 'produtos'.
 CREATE TRIGGER trigger_produtos_atualizacao
-BEFORE UPDATE ON db_loja.produtos              -- Dispara ANTES de qualquer comando UPDATE na tabela 'produtos'.
+BEFORE UPDATE ON db_loja.produto              -- Dispara ANTES de qualquer comando UPDATE na tabela 'produtos'.
 FOR EACH ROW                                   -- A ação será executada para cada linha individual que for atualizada.
 EXECUTE FUNCTION db_loja.atualizar_data_atualizacao_trigger(); -- Executa a função que criamos acima.
 
@@ -119,7 +119,7 @@ EXECUTE FUNCTION db_loja.atualizar_data_atualizacao_trigger(); -- Executa a fun�
 --
 
 -- Inserindo dados na tabela de categorias
-INSERT INTO db_loja.categorias_produtos (id, nome, descricao) values
+INSERT INTO db_loja.categorias_produto (id, nome, descricao) values
 (1, 'Eletrônicos', 'Dispositivos eletrônicos e acessórios.'),
 (2, 'Livros', 'Livros de diversos gêneros e autores.'),
 (3, 'Roupas', 'Vestuário masculino, feminino e infantil.'),
@@ -133,7 +133,7 @@ INSERT INTO db_loja.categorias_produtos (id, nome, descricao) values
 
 -- Inserindo dados na tabela de produtos
 -- Note que não precisamos informar 'data_criacao' e 'data_atualizacao', pois elas são preenchidas automaticamente.
-INSERT INTO db_loja.produtos (id, nome, descricao, preco, estoque, id_categoria) VALUES
+INSERT INTO db_loja.produto (id, nome, descricao, preco, estoque, id_categoria) VALUES
 (1, 'Smartphone X', 'Smartphone de última geração com 128GB.', 2999.90, 50, 1),
 (2, 'Notebook Pro', 'Notebook com processador i7, 16GB RAM.', 7499.50, 30, 1),
 (3, 'O Senhor dos Anéis', 'Edição de colecionador da trilogia.', 199.99, 100, 2),
@@ -156,7 +156,7 @@ INSERT INTO db_loja.produtos (id, nome, descricao, preco, estoque, id_categoria)
 (20, 'Calça Jeans Slim', 'Jeans com elastano para maior conforto.', 149.90, 180, 3);
 
 -- Inserindo dados na tabela de clientes
-INSERT INTO db_loja.clientes (id, nome, email, telefone) VALUES
+INSERT INTO db_loja.cliente (id, nome, email, telefone) VALUES
 (1, 'João Silva', 'joao.silva@example.com', '(21) 98765-4321'),
 (2, 'Maria Oliveira', 'maria.oliveira@example.com', '(11) 91234-5678'),
 (3, 'Carlos Pereira', 'carlos.p@example.com', '(31) 99999-8888'),

@@ -1,0 +1,43 @@
+{
+  "id_pedido": "PED77890",
+  "data_pedido": "2025-10-25T10:45:15Z",
+  "status": "Aguardando Pagamento",
+  "cliente": {
+    "id_cliente": "CLI456",
+    "nome": "Ricardo Almeida",
+    "email": "ricardo.a@exemplo.com"
+  },
+  "itens": [
+    {
+      "sku": "NBK-I5-11G",
+      "produto": "Notebook Pro",
+      "quantidade": 1,
+      "preco_unitario": 4500.00
+    },
+    {
+      "sku": "MSE-LOG-G203",
+      "produto": "Mouse Gamer",
+      "quantidade": 1,
+      "preco_unitario": 180.50
+    },
+    {
+      "sku": "CAB-HDMI-2M",
+      "produto": "Cabo HDMI 2 Metros",
+      "quantidade": 2,
+      "preco_unitario": 35.00
+    }
+  ],
+  "entrega": {
+    "metodo": "Expressa",
+    "taxa_frete": 25.00,
+    "endereco": {
+      "rua": "Rua das Flores",
+      "numero": 123,
+      "complemento": "Apto 4B",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ",
+      "cep": "20040-001"
+    }
+  },
+  "total_pedido": 4775.50
+}

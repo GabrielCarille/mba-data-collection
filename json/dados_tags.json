@@ -1,0 +1,51 @@
+[
+  {
+    "produto_id": 451,
+    "nome": "Smartphone X",
+    "tags": [
+      "tecnologia",
+      "celular",
+      "promoção",
+      "eletrônicos"
+    ]
+  },
+  {
+    "produto_id": 452,
+    "nome": "Laptop Y",
+    "tags": [
+      "tecnologia",
+      "computador",
+      "trabalho",
+      "portátil"
+    ]
+  },
+  {
+    "produto_id": 453,
+    "nome": "Fone de Ouvido Z",
+    "tags": []
+  },
+  {
+    "produto_id": 454,
+    "nome": "Smartwatch W",
+    "tags": [
+      "wearable",
+      "saúde",
+      "fitness",
+      "relógio"
+    ]
+  },
+  {
+    "produto_id": 455,
+    "nome": "Teclado Mecânico K",
+    "tags": [
+      "periféricos",
+      "gamer",
+      "computador"
+    ]
+  },
+  {
+    "produto_id": 456,
+    "nome": "Mouse sem Fio M",
+    "tags": null
+  }
+]

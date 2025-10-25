@@ -17,7 +17,7 @@
       ]
     }
   },
-  "postCreateCommand": "pip install -r requirements.txt",
-  "forwardPorts": [],
+  // Encaminha as portas do MinIO (9000, 9001) e do Postgres (5432)
+  "forwardPorts": [9000, 9001, 5432],
   "remoteUser": "vscode"
 }

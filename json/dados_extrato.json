@@ -1,0 +1,123 @@
+[
+  {
+    "id_extrato": "EXT-2024-10-001",
+    "periodo": {
+      "data_inicio": "2024-09-01T00:00:00Z",
+      "data_fim": "2024-09-30T23:59:59Z"
+    },
+    "cliente": {
+      "cliente_id": "CLI-1001",
+      "nome": "Ana Silva",
+      "documento": "111.222.333-44"
+    },
+    "conta": {
+      "banco": "Banco Digital Alfa",
+      "agencia": "0001",
+      "numero_conta": "12345-6",
+      "tipo": "Conta Corrente"
+    },
+    "saldos": {
+      "saldo_anterior": 4500.75,
+      "saldo_atual": 3865.55
+    },
+    "transacoes": [
+      {
+        "id_transacao": "TRX-9001",
+        "data": "2024-09-02T10:15:00Z",
+        "descricao": "Pagamento PIX - Aluguel",
+        "valor": -1500.00,
+        "tipo": "DEBITO"
+      },
+      {
+        "id_transacao": "TRX-9002",
+        "data": "2024-09-05T09:00:00Z",
+        "descricao": "Depósito Salário",
+        "valor": 1200.00,
+        "tipo": "CREDITO"
+      },
+      {
+        "id_transacao": "TRX-9003",
+        "data": "2024-09-10T14:30:00Z",
+        "descricao": "Supermercado XYZ",
+        "valor": -335.20,
+        "tipo": "DEBITO"
+      }
+    ]
+  },
+  {
+    "id_extrato": "EXT-2024-10-002",
+    "periodo": {
+      "data_inicio": "2024-09-01T00:00:00Z",
+      "data_fim": "2024-09-30T23:59:59Z"
+    },
+    "cliente": {
+      "cliente_id": "CLI-1002",
+      "nome": "Bruno Costa",
+      "documento": "555.666.777-88"
+    },
+    "conta": {
+      "banco": "Banco Digital Alfa",
+      "agencia": "0001",
+      "numero_conta": "98765-4",
+      "tipo": "Conta Poupança"
+    },
+    "saldos": {
+      "saldo_anterior": 10200.00,
+      "saldo_atual": 10250.50
+    },
+    "transacoes": [
+      {
+        "id_transacao": "TRX-9004",
+        "data": "2024-09-20T18:00:00Z",
+        "descricao": "Compra Online - Amazon",
+        "valor": -150.00,
+        "tipo": "DEBITO"
+      },
+      {
+        "id_transacao": "TRX-9005",
+        "data": "2024-09-30T10:00:00Z",
+        "descricao": "Rendimento Poupança",
+        "valor": 200.50,
+        "tipo": "CREDITO"
+      }
+    ]
+  },
+  {
+    "id_extrato": "EXT-2024-10-003",
+    "periodo": {
+      "data_inicio": "2024-09-01T00:00:00Z",
+      "data_fim": "2024-09-30T23:59:59Z"
+    },
+    "cliente": {
+      "cliente_id": "CLI-1003",
+      "nome": "Carla Dias",
+      "documento": "999.888.777-66"
+    },
+    "conta": {
+      "banco": "Banco Digital Alfa",
+      "agencia": "0002",
+      "numero_conta": "55555-0",
+      "tipo": "Conta Corrente"
+    },
+    "saldos": {
+      "saldo_anterior": 500.00,
+      "saldo_atual": 150.00
+    },
+    "transacoes": [
+      {
+        "id_transacao": "TRX-9006",
+        "data": "2024-09-15T12:00:00Z",
+        "descricao": "Restaurante Sabor Local",
+        "valor": -150.00,
+        "tipo": "DEBITO"
+      },
+      {
+        "id_transacao": "TRX-9007",
+        "data": "2024-09-25T15:45:00Z",
+        "descricao": "Pagamento Fatura Cartão",
+        "valor": -200.00,
+        "tipo": "DEBITO"
+      }
+    ]
+  }
+]

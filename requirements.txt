@@ -16,3 +16,8 @@ pyspark
 # e receba dados do seu container de PostgreSQL. Sem ele, Python e Postgres não saberiam como conversar.
 # A versão '-binary' é recomendada por já vir com dependências pré-compiladas, facilitando a instalação.
 psycopg2-binary
+
+# Minio: O SDK oficial do Python para interagir com o Minio e outros
+# armazenamentos de objetos compatíveis com a API S3.
+# Usado para fazer upload, download e gerenciar arquivos/objetos no container 'minio'.
+minio

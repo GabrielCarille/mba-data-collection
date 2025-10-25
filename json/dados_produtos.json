@@ -1,0 +1,52 @@
+{
+  "api_version": "1.2",
+  "produtos": [
+    {
+      "id": 101,
+      "nome": "Notebook Gamer Ultra",
+      "categoria": "Eletrônicos",
+      "preco": 8500.00,
+      "disponivel": true,
+      "tags": ["gamer", "notebook", "alta performance"],
+      "especificacoes": {
+        "processador": "Intel Core i9",
+        "ram": "32GB DDR5",
+        "armazenamento": "2TB SSD NVMe"
+      }
+    },
+    {
+      "id": 102,
+      "nome": "Camiseta Básica",
+      "categoria": "Vestuário",
+      "preco": 79.90,
+      "disponivel": true,
+      "variacoes": [
+        { "cor": "Preto", "tamanho": "M", "estoque": 120 },
+        { "cor": "Branco", "tamanho": "M", "estoque": 95 },
+        { "cor": "Azul", "tamanho": "G", "estoque": 0 }
+      ]
+    },
+    {
+      "id": 103,
+      "nome": "Grãos de Café Especial",
+      "categoria": "Alimentos",
+      "preco": 45.50,
+      "disponivel": true,
+      "detalhes": {
+        "origem": "Minas Gerais",
+        "peso_g": 500,
+        "torra": "Média"
+      },
+      "avaliacoes": null
+    },
+    {
+      "id": 104,
+      "nome": "Monitor 4K (Modelo Antigo)",
+      "categoria": "Eletrônicos",
+      "preco": 2200.00,
+      "disponivel": false,
+      "preco_anterior": 2899.00,
+      "tags": ["monitor", "4k", "descontinuado"]
+    }
+  ]
+}

@@ -7,9 +7,16 @@ services:
       dockerfile: .devcontainer/Dockerfile
     volumes:
       - ..:/workspace:cached
+    # Adiciona variáveis de ambiente para o app se conectar ao MinIO
+    environment:
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_BUCKET=mybucket # Bucket de exemplo
     command: sleep infinity
     depends_on:
       - db
+      - minio # Adiciona dependência do MinIO
 
   db:
     image: postgres:15
@@ -19,6 +26,23 @@ services:
       - POSTGRES_DB=mydb
     volumes:
       - postgres-data:/var/lib/postgresql/data
+    ports: # Boa prática expor a porta do DB internamente
+      - "5432:5432"
+
+  # Novo serviço MinIO
+  minio:
+    image: minio/minio:latest
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+      - MINIO_DEFAULT_BUCKETS=mybucket # Opcional: cria um bucket ao iniciar
+    ports:
+      - "9000:9000" # Porta da API
+      - "9001:9001" # Porta do Console Web
+    volumes:
+      - minio-data:/data
+    command: server /data --console-address ":9001"
 
 volumes:
   postgres-data:
+  minio-data: # Adiciona o volume para o MinIO
